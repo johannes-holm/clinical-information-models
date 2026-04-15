@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <h3>Kontaktandmed</h3>
+
+  <p>Kontaktandmete infomudel</p>
+
+  <p>
+    <a href="infomudelid.html">← Tagasi infomudelite nimekirja</a> |
+    <a href="StructureDefinition-Kontaktandmed.html">FHIR StructureDefinition</a>
+  </p>
+
+  <h4>Klassidiagramm</h4>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js">//</script>
+  <script>
+  //
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  //
+  </script>
+
+  {% include generated-mermaid-Kontaktandmed.xhtml %}
+
+  <h4>Andmeelemendid</h4>
+
+  {% include generated-table-Kontaktandmed.xhtml %}
+
+</div>

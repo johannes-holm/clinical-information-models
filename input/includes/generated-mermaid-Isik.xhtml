@@ -1,0 +1,32 @@
+<!-- Auto-generated from Isik -->
+<div class="mermaid">
+classDiagram
+
+  class Isik {
++code suhtlusKeel [0..*]
++code seotus [1..*]
++id identifikaator [0..*]
+  }
+
+  class Kontaktandmed
+
+  click Kontaktandmed href "model-kontaktandmed.html"
+
+  Isik --> "0..*" Kontaktandmed : kontaktandmed
+  class Aadress
+
+  click Aadress href "model-aadress.html"
+
+  Isik --> "0..*" Aadress : aadress
+  class Nimi
+
+  click Nimi href "model-nimi.html"
+
+  Isik --> "0..*" Nimi : nimi
+  class Periood
+
+  click Periood href "model-periood.html"
+
+  Isik --> "0..1" Periood : periood
+
+</div>

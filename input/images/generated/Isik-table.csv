@@ -1,0 +1,8 @@
+﻿Tase;Andmeelement;Andmeelement (täisrada);Kirjeldus;Kohustuslik;Kardinaalsus;Korduvus;Andmetuup;Loend;Selgitus;Naide
+1;kontaktandmed;Isik.kontaktandmed;Isiku kontaktandmed;Ei;0..*;Korduv;Kontaktandmed;;;
+1;aadress;Isik.aadress;Isiku aadress;Ei;0..*;Korduv;Aadress;;;
+1;nimi;Isik.nimi;Isiku nimi;Ei;0..*;Korduv;Nimi;;;
+1;periood;Isik.periood;Kaua on olnud kontaktisik;Ei;0..1;Ei ole korduv;Periood;;;
+1;suhtlusKeel;Isik.suhtlusKeel;Isiku suhtluskeel;Ei;0..*;Korduv;code;;;
+1;seotus;Isik.seotus;Kuidas on inimesega seotud;Jah;1..*;Korduv;code;;;
+1;identifikaator;Isik.identifikaator;Isiku identifikaator;Ei;0..*;Korduv;id;;;

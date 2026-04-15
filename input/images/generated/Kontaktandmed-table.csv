@@ -1,0 +1,9 @@
+﻿Tase;Andmeelement;Andmeelement (täisrada);Kirjeldus;Kohustuslik;Kardinaalsus;Korduvus;Andmetuup;Loend;Selgitus;Naide
+1;eMail;Kontaktandmed.eMail;E-mail;Ei;0..*;Korduv;BackboneElement;;;
+2;  meiliaadress;Kontaktandmed.eMail.meiliaadress;Meiliaadress;Jah;1..1;Ei ole korduv;string;;;
+2;  periood;Kontaktandmed.eMail.periood;Periood;Ei;0..1;Ei ole korduv;Periood;;;
+2;  meiliaadressTuup;Kontaktandmed.eMail.meiliaadressTuup;Meiliaadress tüüp;Jah;1..1;Ei ole korduv;code;;;
+1;telefon;Kontaktandmed.telefon;Telefon;Ei;0..*;Korduv;BackboneElement;;;
+2;  telefoninumber;Kontaktandmed.telefon.telefoninumber;Telefoninumber;Jah;1..1;Ei ole korduv;string;;;
+2;  periood;Kontaktandmed.telefon.periood;Periood;Ei;0..1;Ei ole korduv;Periood;;;
+2;  telefoniTuup;Kontaktandmed.telefon.telefoniTuup;Telefoni tüüp;Jah;1..1;Ei ole korduv;code;;;

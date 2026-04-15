@@ -1,0 +1,4 @@
+﻿Tase;Andmeelement;Andmeelement (täisrada);Kirjeldus;Kohustuslik;Kardinaalsus;Korduvus;Andmetuup;Loend;Selgitus;Naide
+1;alguseKuupaev;Periood.alguseKuupaev;Alguse kuupäev;Ei;0..1;Ei ole korduv;date;;;
+1;lopuKuupaev;Periood.lopuKuupaev;Lõpu kuupäev;Ei;0..1;Ei ole korduv;date;;;
+1;kestvus;Periood.kestvus;Kestvus;Ei;0..1;Ei ole korduv;integer;;;

@@ -1,0 +1,12 @@
+﻿Tase;Andmeelement;Andmeelement (täisrada);Kirjeldus;Kohustuslik;Kardinaalsus;Korduvus;Andmetuup;Loend;Selgitus;Naide
+1;maakond;Aadress.maakond;Maakond;Ei;0..1;Ei ole korduv;string;;;
+1;asutusuksus;Aadress.asutusuksus;Asutusüksus;Ei;0..1;Ei ole korduv;string;;;
+1;omavalitsus;Aadress.omavalitsus;Omavalitsus;Ei;0..1;Ei ole korduv;string;;;
+1;postiindeks;Aadress.postiindeks;Postiindeks;Ei;0..1;Ei ole korduv;integer;;;
+1;korteriNumber;Aadress.korteriNumber;Korteri number;Ei;0..1;Ei ole korduv;string;;;
+1;majaNumber;Aadress.majaNumber;Maja number;Ei;0..1;Ei ole korduv;string;;;
+1;tekst;Aadress.tekst;Tekst;Ei;0..1;Ei ole korduv;string;;;
+1;riik;Aadress.riik;Riik;Ei;0..1;Ei ole korduv;code;riik (required);;
+1;aadressiTuup;Aadress.aadressiTuup;Aadressi tüüp;Jah;1..1;Ei ole korduv;code;aadressi-tuup (required);;
+1;adsId;Aadress.adsId;ADS ID;Jah;1..1;Ei ole korduv;code;;;
+1;periood;Aadress.periood;Periood;Ei;0..1;Ei ole korduv;Periood;;;

@@ -1,0 +1,16 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">Avaleht</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Infomudelid<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="infomudelid.html">Kõik infomudelid</a></li>
+      <li role="separator" class="divider"> </li>
+      <li><a href="model-aadress.html">Aadress</a></li>
+      <li><a href="model-isik.html">Isik</a></li>
+      <li><a href="model-kontaktandmed.html">Kontaktandmed</a></li>
+      <li><a href="model-nimi.html">Nimi</a></li>
+      <li><a href="model-periood.html">Periood</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artefaktid</a></li>
+</ul>

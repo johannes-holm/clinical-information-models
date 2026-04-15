@@ -1,0 +1,13 @@
+{
+  "name": "hl7.fhir.ee.template",
+  "version": "0.0.1",
+  "type": "fhir.template",
+  "license": "Apache-2.0",
+  "description": "TEHIK template",
+  "author": "http://tehik.ee",
+  "canonical": "http://github.com/TEHIK-EE",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  }
+}

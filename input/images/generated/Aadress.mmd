@@ -1,0 +1,20 @@
+classDiagram
+
+  class Aadress {
++string maakond [0..1]
++string asutusuksus [0..1]
++string omavalitsus [0..1]
++integer postiindeks [0..1]
++string korteriNumber [0..1]
++string majaNumber [0..1]
++string tekst [0..1]
++code riik [0..1]
++code aadressiTuup [1..1]
++code adsId [1..1]
+  }
+
+  class Periood
+
+  click Periood href "model-periood.html"
+
+  Aadress --> "0..1" Periood : periood

@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+
+  <h3>Nimi</h3>
+
+  <p>Nime infomudel</p>
+
+  <p>
+    <a href="infomudelid.html">← Tagasi infomudelite nimekirja</a> |
+    <a href="StructureDefinition-Nimi.html">FHIR StructureDefinition</a>
+  </p>
+
+  <h4>Klassidiagramm</h4>
+
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js">//</script>
+  <script>
+  //
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  //
+  </script>
+
+  {% include generated-mermaid-Nimi.xhtml %}
+
+  <h4>Andmeelemendid</h4>
+
+  {% include generated-table-Nimi.xhtml %}
+
+</div>

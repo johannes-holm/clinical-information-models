@@ -1,0 +1,7 @@
+﻿Tase;Andmeelement;Andmeelement (täisrada);Kirjeldus;Kohustuslik;Kardinaalsus;Korduvus;Andmetuup;Loend;Selgitus;Naide
+1;eesnimi;Nimi.eesnimi;Eesnimi;Ei;0..1;Ei ole korduv;string;;;
+1;perekonnanimi;Nimi.perekonnanimi;Perekonnanimi;Ei;0..1;Ei ole korduv;string;;;
+1;tekst;Nimi.tekst;Tekst;Ei;0..1;Ei ole korduv;string;;;
+1;tiitel;Nimi.tiitel;Tiitel;Ei;0..1;Ei ole korduv;string;;;
+1;kasutus;Nimi.kasutus;Kasutus;Jah;1..1;Ei ole korduv;code;name-use (required);;
+1;periood;Nimi.periood;Periood;Ei;0..1;Ei ole korduv;Periood;;;

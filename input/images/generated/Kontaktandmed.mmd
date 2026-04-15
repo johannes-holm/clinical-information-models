@@ -1,0 +1,23 @@
+classDiagram
+
+  class Kontaktandmed {
+  }
+
+Kontaktandmed --> "0..*" Kontaktandmed_eMail : eMail
+Kontaktandmed --> "0..*" Kontaktandmed_telefon : telefon
+  class Kontaktandmed_eMail {
++string meiliaadress [1..1]
++code meiliaadressTuup [1..1]
+  }
+
+  class Periood
+
+  click Periood href "model-periood.html"
+
+  Kontaktandmed_eMail --> "0..1" Periood : periood
+  class Kontaktandmed_telefon {
++string telefoninumber [1..1]
++code telefoniTuup [1..1]
+  }
+
+  Kontaktandmed_telefon --> "0..1" Periood : periood

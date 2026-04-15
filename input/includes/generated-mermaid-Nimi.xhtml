@@ -1,0 +1,19 @@
+<!-- Auto-generated from Nimi -->
+<div class="mermaid">
+classDiagram
+
+  class Nimi {
++string eesnimi [0..1]
++string perekonnanimi [0..1]
++string tekst [0..1]
++string tiitel [0..1]
++code kasutus [1..1]
+  }
+
+  class Periood
+
+  click Periood href "model-periood.html"
+
+  Nimi --> "0..1" Periood : periood
+
+</div>
