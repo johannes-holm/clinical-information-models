@@ -10,7 +10,6 @@ permissions:
   pages: write
   id-token: write
 
-
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -24,7 +23,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -44,16 +42,31 @@ jobs:
         with:
           python-version: '3.12'
 
+      # ──────────────────────────────────────────
+      #  THIS IS THE FIX — Install Jekyll
+      # ──────────────────────────────────────────
+      - name: Setup Ruby and Jekyll
+        run: |
+          sudo gem install jekyll
+
       - name: Install SUSHI
         run: npm install -g fsh-sushi
 
+      - name: Cache IG Publisher
+        uses: actions/cache@v4
+        with:
+          path: input-cache/publisher.jar
+          key: ig-publisher-latest
+
       - name: Download IG Publisher
         run: |
-          mkdir -p input-cache
-          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
-            -o input-cache/publisher.jar
+          if [ ! -f input-cache/publisher.jar ]; then
+            mkdir -p input-cache
+            curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+              -o input-cache/publisher.jar
+          fi
 
-
+      # ── Build Pipeline ─────────────────────────
       - name: Step 1 - SUSHI (discover models)
         run: sushi .
 
@@ -70,10 +83,9 @@ jobs:
 
       - name: Step 5 - IG Publisher
         run: |
-          java -jar input-cache/publisher.jar publisher \
-            -ig . \
-            -publish https://<user>.github.io/<repo>/
+          java -jar input-cache/publisher.jar publisher -ig .
 
+      # ── Deploy ─────────────────────────────────
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
