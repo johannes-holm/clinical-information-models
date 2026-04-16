@@ -17,7 +17,7 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -42,15 +42,16 @@ jobs:
         with:
           python-version: '3.12'
 
-      # ──────────────────────────────────────────
-      #  THIS IS THE FIX — Install Jekyll
-      # ──────────────────────────────────────────
       - name: Setup Ruby and Jekyll
         run: |
           sudo gem install jekyll
 
       - name: Install SUSHI
         run: npm install -g fsh-sushi
+
+      # ✅ Install Mermaid CLI for SVG rendering
+      - name: Install Mermaid CLI
+        run: npm install -g @mermaid-js/mermaid-cli
 
       - name: Cache IG Publisher
         uses: actions/cache@v4
@@ -81,7 +82,18 @@ jobs:
           python scripts/generate_mermaid.py
           python scripts/generate_table.py
 
-      - name: Step 5 - IG Publisher
+      - name: Step 5 - Render Mermaid SVGs
+        run: |
+          mkdir -p input/images/generated
+          for mmd in input/images/generated/*.mmd; do
+            if [ -f "$mmd" ]; then
+              svg="${mmd%.mmd}.svg"
+              echo "Rendering: $mmd -> $svg"
+              mmdc -i "$mmd" -o "$svg" -t neutral --quiet
+            fi
+          done
+
+      - name: Step 6 - IG Publisher
         run: |
           java -jar input-cache/publisher.jar publisher -ig .
 

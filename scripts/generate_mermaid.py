@@ -205,21 +205,24 @@ def process_file(filepath, model_index, output_mmd=None, output_xhtml=None):
     model_id = sd.get('id', 'unknown')
     mermaid_code = generate_mermaid(sd, model_index)
 
+    # Save .mmd file (will be rendered to SVG by mmdc)
     if output_mmd:
         Path(output_mmd).parent.mkdir(parents=True, exist_ok=True)
         Path(output_mmd).write_text(mermaid_code, encoding='utf-8')
         print(f"  Mermaid: {output_mmd}")
 
+    # Save XHTML include — references SVG image, NO scripts
     if output_xhtml:
         Path(output_xhtml).parent.mkdir(parents=True, exist_ok=True)
         xhtml = (
-            f'<!-- Auto-generated from {model_id} -->\n'
-            f'<div class="mermaid">\n'
-            f'{mermaid_code}\n'
+            f'<!-- Auto-generated diagram for {model_id} -->\n'
+            f'<div>\n'
+            f'  <img src="generated/{model_id}.svg" '
+            f'alt="{model_id} klassidiagramm" '
+            f'style="max-width:100%"/>\n'
             f'</div>\n'
         )
         Path(output_xhtml).write_text(xhtml, encoding='utf-8')
-        print(f"  XHTML:   {output_xhtml}")
 
     return mermaid_code
 

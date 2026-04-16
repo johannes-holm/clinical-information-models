@@ -97,7 +97,6 @@ def generate_model_page(model):
     title = model['title']
     desc = model['description'] or title
 
-   
     xml = f'''<div xmlns="http://www.w3.org/1999/xhtml">
 
   <h3>{title}</h3>
@@ -110,13 +109,6 @@ def generate_model_page(model):
   </p>
 
   <h4>Klassidiagramm</h4>
-
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js">//</script>
-  <script>
-  //
-    mermaid.initialize({{ startOnLoad: true, theme: 'default' }});
-  //
-  </script>
 
   {{% include generated-mermaid-{model_id}.xhtml %}}
 
