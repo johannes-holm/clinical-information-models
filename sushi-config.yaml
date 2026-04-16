@@ -6,7 +6,7 @@
 id: ee.fhir.infomudelid
 canonical: https://fhir.ee/infomudelid
 name: TISInfomudelid
-# title: Example Title
+title: Kliinilised infomudelid
 # description: Example Implementation Guide for getting started with SUSHI
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -57,6 +57,8 @@ pages:
       title: Kontaktandmed
     model-nimi.xml:
       title: Nimi
+    model-patsient.xml:
+      title: Patsient
     model-periood.xml:
       title: Periood
 instanceOptions:

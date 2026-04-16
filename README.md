@@ -1,2 +1,3 @@
-# clinical-information-models
-Draft IG for clinical information models used in Estonian National HIS
+# Tervise infosüsteemis kasutatavad infomudelidomavaheliste seostega
+
+Build: https://johannes-holm.github.io/clinical-information-models/index.html

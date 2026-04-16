@@ -8,4 +8,5 @@ Kõik defineeritud infomudelid.
 | [Isik](model-isik.html) | Isiku infomudel | [StructureDefinition](StructureDefinition-Isik.html) |
 | [Kontaktandmed](model-kontaktandmed.html) | Kontaktandmete infomudel | [StructureDefinition](StructureDefinition-Kontaktandmed.html) |
 | [Nimi](model-nimi.html) | Nime infomudel | [StructureDefinition](StructureDefinition-Nimi.html) |
+| [Patsient](model-patsient.html) | Patsiendi infomudel | [StructureDefinition](StructureDefinition-Patsient.html) |
 | [Periood](model-periood.html) | Perioodi infomudel | [StructureDefinition](StructureDefinition-Periood.html) |

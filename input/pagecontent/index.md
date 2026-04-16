@@ -1,6 +1,6 @@
 # TISInfomudelid
 
-See on infomudelite implementatsioonijuhend.
+See on Eestis kasutatavate kliiniliste infomudelite ülevaade.
 
 #### Infomudelid
 
