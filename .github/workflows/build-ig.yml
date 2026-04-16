@@ -1,0 +1,87 @@
+name: Build and Deploy IG
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SUSHI
+        run: npm install -g fsh-sushi
+
+      - name: Download IG Publisher
+        run: |
+          mkdir -p input-cache
+          curl -L https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar \
+            -o input-cache/publisher.jar
+
+
+      - name: Step 1 - SUSHI (discover models)
+        run: sushi .
+
+      - name: Step 2 - Generate pages and config
+        run: python scripts/generate_pages.py
+
+      - name: Step 3 - Re-run SUSHI (updated config)
+        run: sushi .
+
+      - name: Step 4 - Generate diagrams and tables
+        run: |
+          python scripts/generate_mermaid.py
+          python scripts/generate_table.py
+
+      - name: Step 5 - IG Publisher
+        run: |
+          java -jar input-cache/publisher.jar publisher \
+            -ig . \
+            -no-sushi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './output'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

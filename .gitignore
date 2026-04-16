@@ -1,7 +1,12 @@
+output/
+temp/
+template/
+input-cache/publisher.jar
+fsh-generated/
+input/pagecontent/model-*.xml
+input/pagecontent/infomudelid.md
+input/includes/menu.xml
+input/includes/generated-*.xhtml
+input/images/generated/
 .DS_Store
 Thumbs.db
-/fsh-generated
-/input-cache
-/output
-/temp
-/template
