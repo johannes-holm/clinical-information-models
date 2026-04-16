@@ -11,13 +11,6 @@
 
   <h4>Klassidiagramm</h4>
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js">//</script>
-  <script>
-  //
-    mermaid.initialize({ startOnLoad: true, theme: 'default' });
-  //
-  </script>
-
   {% include generated-mermaid-Aadress.xhtml %}
 
   <h4>Andmeelemendid</h4>

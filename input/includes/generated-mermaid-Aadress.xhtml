@@ -1,24 +1,38 @@
-<!-- Auto-generated from Aadress -->
-<div class="mermaid">
-classDiagram
+<!-- Auto-generated diagram for Aadress -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 707 342" style="max-width:707px;width:100%;height:auto;font-family:Segoe UI,Roboto,Arial,sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="arrow-ref" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+  </defs>
 
-  class Aadress {
-+string maakond [0..1]
-+string asutusuksus [0..1]
-+string omavalitsus [0..1]
-+integer postiindeks [0..1]
-+string korteriNumber [0..1]
-+string majaNumber [0..1]
-+string tekst [0..1]
-+code riik [0..1]
-+code aadressiTuup [1..1]
-+code adsId [1..1]
-  }
+  <path d="M307,166 C367,166 367,150.0 427,150.0" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-ref)"/>
+  <rect x="312" y="146.0" width="110" height="17" rx="3" fill="white" stroke="#d97706" stroke-width="0.5"/>
+  <text x="367" y="159.0" text-anchor="middle" font-size="11" fill="#d97706">periood [0..1]</text>
 
-  class Periood
+  <rect x="40" y="30" width="267" height="272" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Aadress"><rect x="40" y="30" width="267" height="272" rx="6"/></clipPath>
+  <rect x="40" y="30" width="267" height="32" fill="#2563eb" clip-path="url(#clip-Aadress)"/>
+  <text x="173" y="51" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Aadress</text>
+  <line x1="40" y1="62" x2="307" y2="62" stroke="#2563eb" stroke-width="1"/>
+  <text x="52" y="86" fill="#1f2937" font-size="13">○ string maakond [0..1]</text>
+  <text x="52" y="108" fill="#1f2937" font-size="13">○ string asutusuksus [0..1]</text>
+  <text x="52" y="130" fill="#1f2937" font-size="13">○ string omavalitsus [0..1]</text>
+  <text x="52" y="152" fill="#1f2937" font-size="13">○ integer postiindeks [0..1]</text>
+  <text x="52" y="174" fill="#1f2937" font-size="13">○ string korteriNumber [0..1]</text>
+  <text x="52" y="196" fill="#1f2937" font-size="13">○ string majaNumber [0..1]</text>
+  <text x="52" y="218" fill="#1f2937" font-size="13">○ string tekst [0..1]</text>
+  <text x="52" y="240" fill="#1f2937" font-size="13">○ code riik [0..1]</text>
+  <text x="52" y="262" fill="#dc2626" font-size="13">● code aadressiTuup [1..1]</text>
+  <text x="52" y="284" fill="#dc2626" font-size="13">● code adsId [1..1]</text>
 
-  click Periood href "model-periood.html"
+  <a xlink:href="model-periood.html" target="_top">
+  <rect x="427" y="134.0" width="220" height="64" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Periood"><rect x="427" y="134.0" width="220" height="64" rx="6"/></clipPath>
+  <rect x="427" y="134.0" width="220" height="32" fill="#d97706" clip-path="url(#clip-Periood)"/>
+  <text x="537" y="155.0" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Periood</text>
+  <line x1="427" y1="166.0" x2="647" y2="166.0" stroke="#d97706" stroke-width="1"/>
+  <text x="537" y="190.0" text-anchor="middle" fill="#d97706" font-size="12" font-style="italic">« Infomudel »</text>
+  </a>
 
-  Aadress --> "0..1" Periood : periood
-
-</div>
+</svg>

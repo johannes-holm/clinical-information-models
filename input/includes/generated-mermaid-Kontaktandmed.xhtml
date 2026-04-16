@@ -1,27 +1,53 @@
-<!-- Auto-generated from Kontaktandmed -->
-<div class="mermaid">
-classDiagram
+<!-- Auto-generated diagram for Kontaktandmed -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 715 436" style="max-width:715px;width:100%;height:auto;font-family:Segoe UI,Roboto,Arial,sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="arrow-ref" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+  </defs>
 
-  class Kontaktandmed {
-  }
+  <path d="M150,104 L150,129 L177,129 L177,154" fill="none" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="115" y="117" width="96" height="17" rx="3" fill="white" stroke="#6b7280" stroke-width="0.5"/>
+  <text x="163" y="130" text-anchor="middle" font-size="11" fill="#6b7280">eMail [0..*]</text>
+  <path d="M150,104 L150,202 L177,202 L177,300" fill="none" stroke="#6b7280" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="108" y="190" width="110" height="17" rx="3" fill="white" stroke="#6b7280" stroke-width="0.5"/>
+  <text x="163" y="203" text-anchor="middle" font-size="11" fill="#6b7280">telefon [0..*]</text>
+  <path d="M315,202 C375,202 375,259.0 435,259.0" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-ref)"/>
+  <rect x="320" y="218.0" width="110" height="17" rx="3" fill="white" stroke="#d97706" stroke-width="0.5"/>
+  <text x="375" y="231.0" text-anchor="middle" font-size="11" fill="#d97706">periood [0..1]</text>
+  <path d="M315,348 C375,348 375,277.0 435,277.0" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-ref)"/>
+  <rect x="320" y="300.0" width="110" height="17" rx="3" fill="white" stroke="#d97706" stroke-width="0.5"/>
+  <text x="375" y="313.0" text-anchor="middle" font-size="11" fill="#d97706">periood [0..1]</text>
 
-Kontaktandmed --> "0..*" Kontaktandmed_eMail : eMail
-Kontaktandmed --> "0..*" Kontaktandmed_telefon : telefon
-  class Kontaktandmed_eMail {
-+string meiliaadress [1..1]
-+code meiliaadressTuup [1..1]
-  }
+  <rect x="40" y="30" width="220" height="74" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Kontaktandmed"><rect x="40" y="30" width="220" height="74" rx="6"/></clipPath>
+  <rect x="40" y="30" width="220" height="32" fill="#2563eb" clip-path="url(#clip-Kontaktandmed)"/>
+  <text x="150" y="51" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Kontaktandmed</text>
+  <line x1="40" y1="62" x2="260" y2="62" stroke="#2563eb" stroke-width="1"/>
 
-  class Periood
+  <rect x="40" y="154" width="275" height="96" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Kontaktandmed_eMail"><rect x="40" y="154" width="275" height="96" rx="6"/></clipPath>
+  <rect x="40" y="154" width="275" height="32" fill="#059669" clip-path="url(#clip-Kontaktandmed_eMail)"/>
+  <text x="177" y="175" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">eMail</text>
+  <line x1="40" y1="186" x2="315" y2="186" stroke="#059669" stroke-width="1"/>
+  <text x="52" y="210" fill="#dc2626" font-size="13">● string meiliaadress [1..1]</text>
+  <text x="52" y="232" fill="#dc2626" font-size="13">● code meiliaadressTuup [1..1]</text>
 
-  click Periood href "model-periood.html"
+  <rect x="40" y="300" width="275" height="96" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Kontaktandmed_telefon"><rect x="40" y="300" width="275" height="96" rx="6"/></clipPath>
+  <rect x="40" y="300" width="275" height="32" fill="#059669" clip-path="url(#clip-Kontaktandmed_telefon)"/>
+  <text x="177" y="321" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">telefon</text>
+  <line x1="40" y1="332" x2="315" y2="332" stroke="#059669" stroke-width="1"/>
+  <text x="52" y="356" fill="#dc2626" font-size="13">● string telefoninumber [1..1]</text>
+  <text x="52" y="378" fill="#dc2626" font-size="13">● code telefoniTuup [1..1]</text>
 
-  Kontaktandmed_eMail --> "0..1" Periood : periood
-  class Kontaktandmed_telefon {
-+string telefoninumber [1..1]
-+code telefoniTuup [1..1]
-  }
+  <a xlink:href="model-periood.html" target="_top">
+  <rect x="435" y="243.0" width="220" height="64" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Periood"><rect x="435" y="243.0" width="220" height="64" rx="6"/></clipPath>
+  <rect x="435" y="243.0" width="220" height="32" fill="#d97706" clip-path="url(#clip-Periood)"/>
+  <text x="545" y="264.0" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Periood</text>
+  <line x1="435" y1="275.0" x2="655" y2="275.0" stroke="#d97706" stroke-width="1"/>
+  <text x="545" y="299.0" text-anchor="middle" fill="#d97706" font-size="12" font-style="italic">« Infomudel »</text>
+  </a>
 
-  Kontaktandmed_telefon --> "0..1" Periood : periood
-
-</div>
+</svg>

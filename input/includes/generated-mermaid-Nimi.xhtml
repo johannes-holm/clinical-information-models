@@ -1,19 +1,33 @@
-<!-- Auto-generated from Nimi -->
-<div class="mermaid">
-classDiagram
+<!-- Auto-generated diagram for Nimi -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 707 232" style="max-width:707px;width:100%;height:auto;font-family:Segoe UI,Roboto,Arial,sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#6b7280"/></marker>
+    <marker id="arrow-ref" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d97706"/></marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%"><feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/></filter>
+  </defs>
 
-  class Nimi {
-+string eesnimi [0..1]
-+string perekonnanimi [0..1]
-+string tekst [0..1]
-+string tiitel [0..1]
-+code kasutus [1..1]
-  }
+  <path d="M307,111 C367,111 367,95.0 427,95.0" fill="none" stroke="#d97706" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-ref)"/>
+  <rect x="312" y="91.0" width="110" height="17" rx="3" fill="white" stroke="#d97706" stroke-width="0.5"/>
+  <text x="367" y="104.0" text-anchor="middle" font-size="11" fill="#d97706">periood [0..1]</text>
 
-  class Periood
+  <rect x="40" y="30" width="267" height="162" rx="6" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Nimi"><rect x="40" y="30" width="267" height="162" rx="6"/></clipPath>
+  <rect x="40" y="30" width="267" height="32" fill="#2563eb" clip-path="url(#clip-Nimi)"/>
+  <text x="173" y="51" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Nimi</text>
+  <line x1="40" y1="62" x2="307" y2="62" stroke="#2563eb" stroke-width="1"/>
+  <text x="52" y="86" fill="#1f2937" font-size="13">○ string eesnimi [0..1]</text>
+  <text x="52" y="108" fill="#1f2937" font-size="13">○ string perekonnanimi [0..1]</text>
+  <text x="52" y="130" fill="#1f2937" font-size="13">○ string tekst [0..1]</text>
+  <text x="52" y="152" fill="#1f2937" font-size="13">○ string tiitel [0..1]</text>
+  <text x="52" y="174" fill="#dc2626" font-size="13">● code kasutus [1..1]</text>
 
-  click Periood href "model-periood.html"
+  <a xlink:href="model-periood.html" target="_top">
+  <rect x="427" y="79.0" width="220" height="64" rx="6" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <clipPath id="clip-Periood"><rect x="427" y="79.0" width="220" height="64" rx="6"/></clipPath>
+  <rect x="427" y="79.0" width="220" height="32" fill="#d97706" clip-path="url(#clip-Periood)"/>
+  <text x="537" y="100.0" text-anchor="middle" fill="#ffffff" font-weight="bold" font-size="14">Periood</text>
+  <line x1="427" y1="111.0" x2="647" y2="111.0" stroke="#d97706" stroke-width="1"/>
+  <text x="537" y="135.0" text-anchor="middle" fill="#d97706" font-size="12" font-style="italic">« Infomudel »</text>
+  </a>
 
-  Nimi --> "0..1" Periood : periood
-
-</div>
+</svg>
