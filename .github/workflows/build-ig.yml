@@ -66,7 +66,7 @@ jobs:
             libxrandr2 \
             libpango-1.0-0 \
             libcairo2 \
-            libasound2
+            libasound2t64
         env:
           PUPPETEER_SKIP_DOWNLOAD: 'true'
 
