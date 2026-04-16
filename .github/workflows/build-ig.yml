@@ -48,10 +48,27 @@ jobs:
 
       - name: Install SUSHI
         run: npm install -g fsh-sushi
-
-      # ✅ Install Mermaid CLI for SVG rendering
+        
+      
       - name: Install Mermaid CLI
-        run: npm install -g @mermaid-js/mermaid-cli
+        run: |
+          npm install -g @mermaid-js/mermaid-cli
+          # Puppeteer needs these on Ubuntu
+          sudo apt-get update
+          sudo apt-get install -y \
+            chromium-browser \
+            libgbm-dev \
+            libnss3 \
+            libatk-bridge2.0-0 \
+            libxkbcommon0 \
+            libxcomposite1 \
+            libxdamage1 \
+            libxrandr2 \
+            libpango-1.0-0 \
+            libcairo2 \
+            libasound2
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
 
       - name: Cache IG Publisher
         uses: actions/cache@v4
@@ -84,12 +101,14 @@ jobs:
 
       - name: Step 5 - Render Mermaid SVGs
         run: |
+          export PUPPETEER_EXECUTABLE_PATH=$(which chromium-browser)
           mkdir -p input/images/generated
           for mmd in input/images/generated/*.mmd; do
             if [ -f "$mmd" ]; then
               svg="${mmd%.mmd}.svg"
               echo "Rendering: $mmd -> $svg"
-              mmdc -i "$mmd" -o "$svg" -t neutral --quiet
+              mmdc -i "$mmd" -o "$svg" -t neutral --quiet \
+                -p /dev/stdin <<< '{"executablePath":"'$PUPPETEER_EXECUTABLE_PATH'"}'
             fi
           done
 
